@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'agentlinux' }
+    agent { label 'mylinuxagent' }
 
     stages {
         stage('Check Version') {
