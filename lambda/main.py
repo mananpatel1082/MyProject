@@ -23,7 +23,7 @@ def handler(event, context):
     new_visit_count = visit_count + 1
     table.put_item(Item={"key": "visit_count", "value": new_visit_count})
 
-    version = os.environ.get("VERSION", "1.0")
+    version = os.environ.get("VERSION", "0.0")
     response_body = {
         "message": "Hello Everyone, Hope you are fine 👋",
         "version": version,
