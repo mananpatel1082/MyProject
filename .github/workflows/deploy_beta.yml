@@ -24,15 +24,15 @@ jobs:
         run: npm install 
         
       - name: Install AWS CDK
-        run: npm install -g aws-cdk
+        run: npm install -g aws-cdk 
 
+      - name: Install AWS CDK Constructs
+        run: npm install aws-cdk-lib constructs
+  
       - name: Install CDK dependencies
         working-directory: ./
         run: npm ci
 
-      - name: CDK Acknowledge
-        run:  cdk acknowledge 34892
-        
         
       - name: Deploy to AWS using CDK
         run: npx cdk deploy --require-approval never
