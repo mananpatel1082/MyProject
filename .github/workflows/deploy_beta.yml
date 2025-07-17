@@ -16,10 +16,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-        
-      -name: Install dependencies
-      run: rm -rf node_modules package-lock.json   
-      run: npm install 
+         
+      - name: Install dependencies 
+        run: npm install 
 
       - name: Install CDK dependencies
         working-directory: ./
