@@ -25,7 +25,7 @@ def handler(event, context):
 
     version = os.environ.get("VERSION", "1.0")
     response_body = {
-        "message": "Hello Everyone 👋",
+        "message": "Hello Everyone, Hope you are fine 👋",
         "version": version,
         "visit_count": new_visit_count,
     }
