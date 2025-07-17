@@ -27,8 +27,9 @@ jobs:
         working-directory: ./
         run: npm ci
 
-      - name: Build the project  
-        run:  export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=1
+      - name: CDK Acknowledge
+        run:  cdk acknowledge 34892
+        
         
       - name: Deploy to AWS using CDK
         run: npx cdk deploy --require-approval never
