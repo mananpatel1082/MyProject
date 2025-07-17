@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Check Version') {
             steps {
-                'node --version'
-                'npm --version'
+               sh 'node --version'
+               sh 'npm --version'
             }
         }
     }
