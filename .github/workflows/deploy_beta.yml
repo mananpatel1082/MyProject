@@ -16,7 +16,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '20'
-         
+          
+      - name: remove file
+        run: rm -rf node_modules package-lock.json 
+
       - name: Install dependencies 
         run: npm install 
         
